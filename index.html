@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulatore Quiz Concorsi - Scarica l'App Android</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; text-align: center; }
-        header { background-color: #0288d1; color: white; padding: 40px 20px; }
-        h1 { margin: 0; font-size: 2.5rem; }
-        .container { max-width: 850px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: left; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; color: #2d3748; margin: 0; padding: 0; text-align: center; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #0288d1 0%, #01579b 100%); color: white; padding: 60px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h1 { margin: 0; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px; }
+        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
+        .container { max-width: 900px; margin: -40px auto 40px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; }
         .center { text-align: center; }
-        .btn-download { display: inline-block; background-color: #4caf50; color: white; padding: 15px 30px; font-size: 1.2rem; font-weight: bold; text-decoration: none; border-radius: 5px; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: background 0.3s; }
-        .btn-download:hover { background-color: #43a047; }
-        .info-box { background-color: #e1f5fe; border-left: 5px solid #0288d1; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; }
-        .grid-guide { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
-        @media (max-width: 600px) { .grid-guide { grid-template-columns: 1fr; } }
-        .card { background: #fafafa; border: 1px solid #e0e0e0; padding: 15px; border-radius: 6px; }
-        .card h3 { margin-top: 0; color: #0288d1; display: flex; align-items: center; gap: 8px; }
-        .card ul { padding-left: 20px; margin: 0; }
-        .card li { margin-bottom: 8px; font-size: 0.95rem; }
+        .btn-download { display: inline-block; background-color: #2e7d32; color: white; padding: 16px 35px; font-size: 1.25rem; font-weight: bold; text-decoration: none; border-radius: 8px; margin: 25px 0; box-shadow: 0 4px 14px rgba(46,125,50,0.3); transition: all 0.2s ease; }
+        .btn-download:hover { background-color: #1b5e20; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(46,125,50,0.4); }
+        .info-box { background-color: #e3f2fd; border-left: 5px solid #0288d1; padding: 18px; margin: 25px 0; border-radius: 4px; font-size: 0.95rem; }
+        .grid-guide { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 30px; }
+        @media (max-width: 650px) { .grid-guide { grid-template-columns: 1fr; } }
+        .card { background: #ffffff; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .card h3 { margin-top: 0; color: #0288d1; font-size: 1.15rem; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+        .card ul { padding-left: 20px; margin: 10px 0 0 0; }
+        .card li { margin-bottom: 10px; font-size: 0.95rem; color: #4a5568; }
+        .screenshots-section { margin-top: 40px; text-align: center; }
+        .screenshots-container { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+        .app-screenshot { width: 200px; height: auto; border-radius: 14px; box-shadow: 0 8px 16px rgba(0,0,0,0.15); border: 3px solid #fff; transition: transform 0.3s ease, box-shadow 0.3s ease; background-color: #eee; }
+        .app-screenshot:hover { transform: scale(1.05); box-shadow: 0 12px 24px rgba(0,0,0,0.25); }
     </style>
 </head>
 <body>
@@ -31,19 +36,20 @@
     <div class="container">
         <div class="center">
             <h2>Allena la tua mente con quiz generati da IA</h2>
-            <p>Un database unico di domande e risposte create per coprire tutte le materie principali dei bandi ufficiali.</p>
+            <p style="color: #718096; font-size: 1.1rem;">Un database unico di domande e risposte create per coprire tutte le materie principali dei bandi ufficiali.</p>
             
-            <!-- ⚠️ INCOLLA IL LINK DEL TUO APK DENTRO IL CAMPO href="..." -->
-            <a href="INCOLLA_QUI_IL_LINK_DEL_TUO_APK" class="btn-download">⬇️ SCARICA APK GRATIS</a>
+            <!-- ⚠️ INCOLLA QUI SOTTO IL LINK DEL TUO APK AL POSTO DI # -->
+            <a href="https://github.com/FC-11/FC-11.github.io/releases/download/v1.0/My.QuizzBando.V1.apk" class="btn-download">⬇️ SCARICA APK GRATIS</a>
+
 
             <div class="info-box">
-                <strong>ℹ️ Nota per l'installazione:</strong> Essendo un'applicazione esterna al Play Store, durante l'installazione sul tuo smartphone Android seleziona <em>"Installa comunque"</em> se compare l'avviso di protezione del sistema.
+                <strong>ℹ️ Nota per l'installazione:</strong> Essendo un'applicazione esterna al Google Play Store, durante l'installazione sul tuo smartphone Android seleziona <em>"Installa comunque"</em> se compare l'avviso di protezione del sistema Play Protect.
             </div>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
+        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 40px 0;">
 
-        <h2>📖 GUIDA RAPIDA ALL'USO</h2>
+        <h2 class="center" style="font-size: 1.8rem; color: #1a202c;">📖 GUIDA RAPIDA ALL'USO</h2>
         
         <div class="grid-guide">
             <div class="card">
@@ -51,14 +57,14 @@
                 <ul>
                     <li>L'applicazione viene fornita con un pacchetto di materie d'esame precaricate e pronte all'uso fin dal primo avvio.</li>
                     <li>È possibile espandere il proprio database aggiungendo altri file ufficiali delle domande tramite il pulsante <strong>"Carica CSV"</strong>.</li>
-                    <li>I file aggiuntivi devono rispettare le specifiche.</li>
+                    <li>I file aggiuntivi devono rispettare le specifiche della plancia.</li>
                 </ul>
             </div>
 
             <div class="card">
                 <h3>⚙️ 2. CONFIGURAZIONE DEL BANDO</h3>
                 <ul>
-                    <li><strong>Profili Rapidi:</strong> Salva le tue impostazioni personalizzate (punteggi e timer) con un nome (es. "Mio Profilo") per caricarle all'istante. All'avvio l'app parte in modalità neutra per evitare modifiche involontarie.</li>
+                    <li><strong>Profili Rapidi:</strong> Salva le tue impostazioni personalizzate (punteggi e timer) con un nome (es. "Mio Profilo") per caricarle all'istante. All'avvio l'app parte in modalità neutra per sicurezza.</li>
                     <li><strong>Calcolo Automatico:</strong> Se attivo, riproporziona i punteggi in base al numero di domande estratte, prendendo come riferimento il voto massimo del bando (es. 30 o 100).</li>
                     <li><strong>Selezione Quesiti:</strong> Inserisci il numero di domande da estrarre accanto a ciascuna materia. Lasciando il valore a 0, quella materia verrà esclusa.</li>
                 </ul>
@@ -67,20 +73,33 @@
             <div class="card">
                 <h3>📝 3. SVOLGIMENTO E PLANCIA</h3>
                 <ul>
-                    <li><strong>Navigazione Libera:</strong> Durante il test puoi scorrere liberamente tra i quesiti, andando avanti e indietro tra le domande per gestire al meglio il tuo tempo.</li>
-                    <li><strong>Griglia di Riepilogo:</strong> In alto rimane sempre visibile una griglia interattiva con i numeri di tutte le domande. I quadratini cambiano colore per mostrarti istantaneamente i quesiti risposti e quelli omessi.</li>
-                    <li><strong>Monitoraggio Tempo:</strong> Se previsto dalla modalità d'esame, tieni sotto controllo il tempo a disposizione tramite il timer in alto.</li>
+                    <li><strong>Navigazione Libera:</strong> Durante il test puoi scorrere liberamente tra i quesiti, andando avanti e indietro per gestire al meglio il tuo tempo a disposizione.</li>
+                    <li><strong>Griglia di Riepilogo:</strong> In alto rimane sempre visibile una griglia interattiva con i numeri di tutte le domande. I quadratini cambiano colore per mostrarti istantaneamente i quesiti risposti e quelli rimasti omessi.</li>
+                    <li><strong>Monitoraggio Tempo:</strong> Se previsto dalla modalità d'esame, tieni sotto controllo il tempo residuo tramite il comodo timer in alto.</li>
                 </ul>
             </div>
 
             <div class="card">
                 <h3>📊 4. REVISIONE E STATISTICHE</h3>
                 <ul>
-                    <li><strong>Conclusione Test:</strong> Premi "Concludi" per terminare la prova ed entrare in "Revisione". Il tentativo verrà salvato nella scheda "Statistiche" (esito e punteggio).</li>
+                    <li><strong>Conclusione Test:</strong> Premi "Concludi" per terminare la prova ed entrare in "Revisione". Il tentativo verrà salvato nello storico con l'esito e il punteggio complessivo.</li>
                     <li><strong>Analisi Errori:</strong> In Revisione, la plancia numerica si colorerà in tempo reale (Verde = esatte, Rosso = errori). I quesiti errati vengono memorizzati in <strong>"Ripasso Errori"</strong> nella Home.</li>
-                    <li><strong>Esportazione PDF:</strong> Dalla schermata di Revisione, genera e scarica un report ufficiale in formato PDF dettagliato del tuo esame, ideale da stampare o archiviare.</li>
-                    <li><strong>Monitoraggio Progressi:</strong> Nella scheda "Statistiche" consulta lo storico completo con date, punteggi e grafici di rendimento nel tempo (non è possibile rivedere il singolo esame).</li>
+                    <li><strong>Esportazione PDF:</strong> Dalla schermata di Revisione, genera e scarica un report ufficiale in formato PDF dettagliato del tuo esame, ideale da stampare o archiviare sul PC.</li>
+                    <li><strong>Monitoraggio Progressi:</strong> Nella scheda "Statistiche" consulta lo storico completo con date, punteggi e grafici di rendimento nel tempo.</li>
                 </ul>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 40px 0;">
+
+        <!-- SEZIONE SCREENSHOT AGGIORNATA -->
+        <div class="screenshots-section">
+            <h2 style="font-size: 1.8rem; color: #1a202c;">📱 ANTEPRIMA DELL'APPLICAZIONE</h2>
+            <p style="color: #718096; margin-bottom: 25px;">Sguardi ravvicinati all'interfaccia utente del simulatore d'esame</p>
+            <div class="screenshots-container">
+                <img src="screen1.png" alt="Schermata Home" class="app-screenshot">
+                <img src="screen2.png" alt="Schermata Domande" class="app-screenshot">
+                <img src="screen3.png" alt="Schermata Statistiche" class="app-screenshot">
             </div>
         </div>
     </div>
