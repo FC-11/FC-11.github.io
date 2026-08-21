@@ -37,7 +37,7 @@
         .csv-item:last-child { border-bottom: none; }
         .btn-csv { background-color: #38bdf8; color: #0f172a; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.85rem; transition: all 0.2s; }
         .btn-csv:hover { background-color: #0ea5e9; transform: scale(1.03); }
-        .donation-box { background-color: #1e1b4b; border: 1px solid #4338ca; border-radius: 12px; padding: 25px; margin-top: 35px; text-align: center; }
+        .donation-box { background-color: #1e1b4b; border: 1px solid #4338ca; border-radius: 12px; padding: 25px; margin-top: 25px; text-align: center; }
         .btn-kofi { display: inline-block; background-color: #f59f00; color: white; padding: 12px 25px; font-size: 1.05rem; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(245,159,0,0.3); transition: all 0.2s; }
         .btn-kofi:hover { background-color: #d97706; transform: translateY(-1px); }
         .screenshots-section { margin-top: 40px; text-align: center; }
@@ -69,6 +69,13 @@
 
             <div class="info-box">
                 <strong>ℹ️ Nota per l'installazione:</strong> Essendo un'applicazione esterna al Google Play Store, durante l'installazione sul tuo smartphone Android seleziona <em>"Installa comunque"</em> se compare l'avviso di protezione del sistema Play Protect.
+            </div>
+
+            <!-- IL BOX DONAZIONI È STATO SPOSTATO QUI IN CIMA -->
+            <div class="donation-box">
+                <h3 style="margin-top: 0; color: #fbbf24; font-size: 1.3rem;">☕ Sostieni il progetto My QuizzBando</h3>
+                <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 15px;">L'applicazione è completamente gratuita e senza pubblicità. Se ti è stata utile per studiare, puoi offrirmi un caffè per sostenere i costi di sviluppo!</p>
+                <a href="https://ko-fi.com" target="_blank" class="btn-kofi">☕ Offrimi un caffè su Ko-fi</a>
             </div>
         </div>
 
@@ -108,7 +115,7 @@
                 <h3>📊 4. REVISIONE E STATISTICHE</h3>
                 <ul>
                     <li><strong>Conclusione Test:</strong> Premi "Concludi" per terminare la prova ed entrare in "Revisione". Il tentativo verrà salvato nello storico con l'esito e il punteggio complessivo.</li>
-                    <li><strong>Analisi Errori:</strong> In Revisione, la plancia numerica si colorerà in tempo reale (Verde = esatte, Rosso = errori). I quesiti errati vengono memorizzati in <strong>"Ripasso Errori"</strong> nella Home.</li>
+                    <li><strong>Analisi Errori:</strong> In Revisione, la plancia numerica si colorerà in tempo reale (Verde = esatte, Rosso = errors). I quesiti errati vengono memorizzati in <strong>"Ripasso Errori"</strong> nella Home.</li>
                     <li><strong>Esportazione PDF:</strong> Dalla schermata di Revisione, genera e scarica un report ufficiale in formato PDF dettagliato del tuo esame, ideale da stampare o archiviare sul PC.</li>
                     <li><strong>Monitoraggio Progressi:</strong> Nella scheda "Statistiche" consulta lo storico completo con date, punteggi e grafici di rendimento nel tempo.</li>
                 </ul>
@@ -121,7 +128,7 @@
             <ul class="csv-list">
                 <li class="csv-item">
                     <span>📝 Quiz di Cultura Generale (Esempio)</span>
-                    <a href="cultura-generale:blindato.csv" class="btn-csv">Scarica CSV</a>
+                    <a href="cultura_generale_blindato.csv" class="btn-csv">Scarica CSV</a>
                 </li>
                 <li class="csv-item">
                     <span>📝 Quiz di Inglese (Esempio)</span>
@@ -130,11 +137,7 @@
             </ul>
         </div>
 
-        <div class="donation-box">
-            <h3 style="margin-top: 0; color: #fbbf24; font-size: 1.3rem;">☕ Sostieni il progetto My QuizzBando</h3>
-            <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 15px;">L'applicazione è completamente gratuita e senza pubblicità. Se ti è stata utile per studiare, puoi offrirmi un caffè per sostenere i costi di sviluppo!</p>
-            <a href="https://ko-fi.com" target="_blank" class="btn-kofi">☕ Offrimi un caffè su Ko-fi</a>
-        </div>
+        <hr>
 
         <div class="screenshots-section">
             <h2 style="font-size: 1.8rem;">📱 ANTEPRIMA MY QUIZZBANDO</h2>
