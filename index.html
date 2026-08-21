@@ -5,47 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulatore Quiz Concorsi - My QuizzBando - Scarica l'App Android</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; color: #2d3748; margin: 0; padding: 0; text-align: center; line-height: 1.6; }
-        header { background: linear-gradient(135deg, #0288d1 0%, #01579b 100%); color: white; padding: 60px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        h1 { margin: 0; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px; }
-        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
-        .container { max-width: 900px; margin: -40px auto 40px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; }
+        /* TEMA SCURO GENERALE */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: #cbd5e1; margin: 0; padding: 0; text-align: center; line-height: 1.6; }
+        
+        /* HEADER CON IL TUO BANNER PERSONALIZZATO */
+        header { 
+            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), url('quiz1600x400.png');
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 60px 20px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4); 
+        }
+        
+        /* STRUTTURA INTESTAZIONE CON ICONA E TESTO */
+        .header-container { display: flex; align-items: center; justify-content: center; gap: 25px; max-width: 900px; margin: 0 auto; text-align: left; }
+        @media (max-width: 650px) { .header-container { flex-direction: column; text-align: center; } }
+        .app-icon { width: 95px; height: 95px; border-radius: 22px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); background-color: #1e293b; border: 2px solid #38bdf8; object-fit: cover; }
+        .header-text { flex: 1; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
+        
+        h1 { margin: 0; font-size: 2.8rem; font-weight: 700; letter-spacing: -0.5px; color: #ffffff; }
+        header p { font-size: 1.2rem; color: #94a3b8; margin-top: 5px; margin-bottom: 0; }
+        
+        /* CONTENITORE PRINCIPALE DARK */
+        .container { max-width: 900px; margin: -40px auto 40px auto; padding: 30px; background: #1e293b; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid #334155; text-align: left; }
         .center { text-align: center; }
-        .btn-download { display: inline-block; background-color: #2e7d32; color: white; padding: 16px 35px; font-size: 1.25rem; font-weight: bold; text-decoration: none; border-radius: 8px; margin: 25px 0; box-shadow: 0 4px 14px rgba(46,125,50,0.3); transition: all 0.2s ease; }
-        .btn-download:hover { background-color: #1b5e20; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(46,125,50,0.4); }
-        .info-box { background-color: #e3f2fd; border-left: 5px solid #0288d1; padding: 18px; margin: 25px 0; border-radius: 4px; font-size: 0.95rem; }
+        
+        /* PULSANTE DOWNLOAD OTTIMIZZATO */
+        .btn-download { display: inline-block; background-color: #10b981; color: white; padding: 16px 35px; font-size: 1.25rem; font-weight: bold; text-decoration: none; border-radius: 10px; margin: 25px 0; box-shadow: 0 4px 14px rgba(16,185,129,0.4); transition: all 0.2s ease; border: 1px solid #34d399; }
+        .btn-download:hover { background-color: #059669; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16,185,129,0.6); }
+        
+        /* BOX INFO SOTTO IL DOWNLOAD */
+        .info-box { background-color: #0f172a; border-left: 5px solid #38bdf8; padding: 18px; margin: 25px 0; border-radius: 8px; font-size: 0.95rem; color: #94a3b8; border-top: 1px solid #334155; border-right: 1px solid #334155; border-bottom: 1px solid #334155; }
+        
+        /* GRIGLIA DELLE SCHEDE */
         .grid-guide { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 30px; }
         @media (max-width: 650px) { .grid-guide { grid-template-columns: 1fr; } }
-        .card { background: #ffffff; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-        .card h3 { margin-top: 0; color: #0288d1; font-size: 1.15rem; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+        
+        /* SCHEDE IN DARK MODE */
+        .card { background: #0f172a; border: 1px solid #334155; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .card h3 { margin-top: 0; color: #38bdf8; font-size: 1.15rem; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #334155; padding-bottom: 10px; }
         .card ul { padding-left: 20px; margin: 10px 0 0 0; }
-        .card li { margin-bottom: 10px; font-size: 0.95rem; color: #4a5568; }
+        .card li { margin-bottom: 10px; font-size: 0.95rem; color: #94a3b8; }
+        
+        /* SEZIONE BANCHE DATI CSV */
+        .csv-section { background: #0f172a; border: 1px solid #334155; padding: 25px; border-radius: 12px; margin-top: 35px; }
+        .csv-list { list-style: none; padding: 0; margin: 20px 0 0 0; }
+        .csv-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid #334155; font-size: 0.95rem; color: #cbd5e1; }
+        .csv-item:last-child { border-bottom: none; }
+        .btn-csv { background-color: #38bdf8; color: #0f172a; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.85rem; transition: all 0.2s; }
+        .btn-csv:hover { background-color: #0ea5e9; transform: scale(1.03); }
+        
+        /* BOX DONAZIONI KO-FI */
+        .donation-box { background-color: #1e1b4b; border: 1px solid #4338ca; border-radius: 12px; padding: 25px; margin-top: 35px; text-align: center; }
+        .btn-kofi { display: inline-block; background-color: #f59f00; color: white; padding: 12px 25px; font-size: 1.05rem; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(245,159,0,0.3); transition: all 0.2s; }
+        .btn-kofi:hover { background-color: #d97706; transform: translateY(-1px); }
+
+        /* GALLERIA SCREENSHOT */
         .screenshots-section { margin-top: 40px; text-align: center; }
         .screenshots-container { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
-        .app-screenshot { width: 200px; height: auto; border-radius: 14px; box-shadow: 0 8px 16px rgba(0,0,0,0.15); border: 3px solid #fff; transition: transform 0.3s ease, box-shadow 0.3s ease; background-color: #eee; }
-        .app-screenshot:hover { transform: scale(1.05); box-shadow: 0 12px 24px rgba(0,0,0,0.25); }
+        .app-screenshot { width: 200px; height: auto; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 2px solid #334155; transition: transform 0.3s ease, border-color 0.3s ease; background-color: #0f172a; }
+        .app-screenshot:hover { transform: scale(1.05); border-color: #38bdf8; }
         
-        /* Nuovi stili per la sezione CSV */
-        .csv-section { background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; margin-top: 35px; }
-        .csv-list { list-style: none; padding: 0; margin: 15px 0 0 0; }
-        .csv-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid #e2e8f0; font-size: 0.95rem; }
-        .csv-item:last-child { border-bottom: none; }
-        .btn-csv { background-color: #0288d1; color: white; padding: 6px 12px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.85rem; transition: background 0.2s; }
-        .btn-csv:hover { background-color: #01579b; }
+        hr { border: 0; border-top: 1px solid #334155; margin: 40px 0; }
+        h2 { color: #ffffff; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>My QuizzBando (Simulatore Quiz Concorsi)</h1>
-        <p>L'applicazione Android definitiva per superare i concorsi pubblici</p>
+        <div class="header-container">
+            <!-- ICONA DELLA TUA APP -->
+            <img src="icona.png" alt="Icona My QuizzBando" class="app-icon" onerror="this.style.display='none'">
+            <div class="header-text">
+                <h1>My QuizzBando</h1>
+                <p>L'applicazione Android definitiva per superare i concorsi pubblici</p>
+            </div>
+        </div>
     </header>
 
     <div class="container">
         <div class="center">
             <h2>Allena la tua mente con quiz generati da IA</h2>
-            <p style="color: #718096; font-size: 1.1rem;">Un database unico di domande e risposte create per coprire tutte le materie principali dei bandi ufficiali.</p>
+            <p style="color: #94a3b8; font-size: 1.1rem;">Un database unico di domande e risposte create per coprire tutte le materie principali dei bandi ufficiali.</p>
             
+            <!-- LINK DI DOWNLOAD REALE DIRETTO ALL'APK -->
             <a href="https://github.com" class="btn-download">⬇️ SCARICA APK GRATIS</a>
 
             <div class="info-box">
@@ -53,9 +97,9 @@
             </div>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 40px 0;">
+        <hr>
 
-        <h2 class="center" style="font-size: 1.8rem; color: #1a202c;">📖 GUIDA RAPIDA ALL'USO</h2>
+        <h2 class="center" style="font-size: 1.8rem;">📖 GUIDA RAPIDA ALL'USO</h2>
         
         <div class="grid-guide">
             <div class="card">
@@ -96,33 +140,3 @@
             </div>
         </div>
 
-        <!-- 📂 NUOVA SEZIONE BANCHE DATI CSV -->
-        <div class="csv-section">
-            <h3 style="margin-top: 0; color: #0288d1;">📂 BANCHE DATI IN FORMATO CSV</h3>
-            <p style="color: #4a5568; font-size: 0.95rem; margin: 0;">Scarica questi pacchetti di domande gratuiti e importali direttamente dentro My QuizzBando con il tasto "Carica CSV":</p>
-            <ul class="csv-list">
-                <li class="csv-item">
-                    <span>📝 Quiz di Cultura Generale (Esempio)</span>
-                    <a href="cultura_generale_blindato.csv" class="btn-csv">Scarica CSV</a>
-                </li>
-                <li class="csv-item">
-                    <span>⚖️ Quiz di Inglese (Esempio)</span>
-                    <a href="inglese_blindato.csv" class="btn-csv">Scarica CSV</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- SEZIONE DONAZIONI KO-FI -->
-        <div style="background-color: #fff9db; border: 1px solid #f59f00; border-radius: 8px; padding: 20px; margin-top: 35px; text-align: center;">
-            <h3 style="margin-top: 0; color: #f59f00; font-size: 1.3rem;">☕ Sostieni il progetto My QuizzBando</h3>
-            <p style="color: #495057; font-size: 0.95rem; margin-bottom: 15px;">L'applicazione è completamente gratuita e senza pubblicità. Se ti è stata utile per studiare, puoi offrirmi un caffè per sostenere i costi di sviluppo!</p>
-            <a href="https://ko-fi.com" target="_blank" style="display: inline-block; background-color: #f59f00; color: white; padding: 12px 25px; font-size: 1.05rem; font-weight: bold; text-decoration: none; border-radius: 6px; box-shadow: 0 3px 6px rgba(245,159,0,0.2); transition: background 0.2s;">☕ Offrimi un caffè su Ko-fi</a>
-        </div>
-
-        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 40px 0;">
-
-        <!-- SEZIONE SCREENSHOT AGGIORNATA -->
-        <div class="screenshots-section">
-            <h2 style="font-size: 1.8rem; color: #1a202c;">📱 ANTEPRIMA MY QUIZZBANDO</h2>
-            <p style="color: #718096; margin-bottom: 25px;">Sguardi ravvicinati all'interfaccia utente del simulatore d'esame</p>
-            <div class="screenshots-container">
